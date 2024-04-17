@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+	font-family: "Inter";    
+}
+
+html {
+	font-size: 10px;
+}
+
+.body {
+	padding: 9rem;
+}
+
+.title h1 {
+	font-size: 13rem
+}
+
+.title h5 {
+	font-size: 4rem;
+	font-weight: 300;
+}
+
+.status {
+	margin-top: 5vh;
+}
+
+.status-head {
+	background-color: black;
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10rem;
+}
+
+.status-head h5 {
+	color: white;
+}
+
+.status-line {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 4rem;
+}
+
+.status-text {
+	font-size: 4.5rem;
+	font-weight: 600;
+}	
+
+.status-okay {
+	font-size: 3rem;
+	background-color: #0f0;
+	color: white;
+	border-radius: 3rem;
+	display: flex;
+	align-items: center;
+	padding: 0 2rem;
+}
+
+.probability {
+	background-color: black;
+	border-radius: 3rem;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 2.5rem;
+	margin-top: 5vh;
+}
+
+.probability h5 {
+	font-size: 5rem;
+	color: white;
+}
+
+.meter {
+	position: fixed;
+	left: 0;
+	bottom: 25rem;
+	height: 25vh;
+	width: 5rem;
+	background: linear-gradient(#0f0, #f00);
+	border-top-right-radius: 3rem;
+	border-bottom-right-radius: 3rem;
+	z-index: 99;
+}
+
+.ship img {
+	width: 40rem;
+	margin-left: 20rem;
+	transform: translateY(0.9rem);
+	z-index: 1;
+}
+
+.sea {
+	background: black;
+	height: 33vh;
+	width: 100vw;
+	display: flex;
+}
+
+.nav {
+	background-color: #111;
+	width: 100vw;
+	height: 18rem;
+	position: fixed;
+	bottom: 0;
+	z-index: 2;
+	display: flex;
+}
+
+.nav img {
+	height: 100%;
+}
+
+.links {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+}
+
+.links a {
+	color: white;
+	text-decoration: none;
+	font-size: 4rem;
+	font-weight: 600;
+	margin-right: 4rem;
+	padding: 0.5rem 2rem;
+}
+
+.links a.super {
+	color: black;
+	background: white;
+	border-radius: 5rem;
+}
+
+.ship {
+  animation: float 2s ease-in-out infinite; /* Animation name, duration, timing and loop count */
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px); 
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
