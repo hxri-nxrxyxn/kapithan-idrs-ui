@@ -22,6 +22,7 @@ const firebaseConfig = {
     const temperature = ref(db, 'temperature');
     const water_level = ref(db, 'water_level');
 
+    console.log(document);
 
     const connectedRef = ref(db, ".info/connected");
     onValue(connectedRef, (snap) => {
@@ -32,14 +33,27 @@ const firebaseConfig = {
     	}
     });
     
-    const connectedRef = ref(db, "temperature");
-    onValue(temperature, (snap) => {
-    	const data = snapshot.val();
-    		console.log(data);
-    });
-
     onValue(temperature, (snapshot) => {
     	const data = snapshot.val();
-    	const dataContainer = document.getElementById('temperature');
-  dataContainer.innerHTML = JSON.stringify(data, null, 2); // Format and display data
-});
+    	console.log(data);
+        const dataContainer = document.getElementById('temperature');
+        dataContainer.innerHTML = JSON.stringify(data, null, 2);
+    });
+
+    onValue(water_level, (snapshot) => {
+    	const data = snapshot.val();
+    	console.log(data);
+        const dataContainer = document.getElementById('water_level');
+        dataContainer.innerHTML = JSON.stringify(data, null, 2);
+    });
+
+const apiKey = '7ad415d46b41f486db6d278b774e0ec8';
+const cityName = 'Delhi';
+
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`) // Fetch data using city name and API key
+.then(response => response.json())
+.then(data => {
+  const temperature = Math.round(data.main.temp); // Extract and round temperature
+  document.getElementById('temperature').textContent = `${temperature} °C`; // Update HTML with temperature and degree symbol
+})
+.catch(error => console.error(error));

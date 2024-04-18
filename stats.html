@@ -4,55 +4,116 @@
 	<link href="main.css" rel="stylesheet">
 </head>
 <body>
+    <script type="module" src="scripts.js"></script>
 	<div class="body">
 		<div class="title">
-			<h1>Kozhikkode</h1>
+			<h1>Kozhikode</h1>
 			<h5>
 				KERALA
 				<b>INDIA</b>
 			</h5>
 		</div>
-		<div class="status">
-			<div class="status-head">
-				<h5 class="status-text">PRIMARY SOURCES</h5>
+
+		<div class="table">
+			<div class="row">
+				<div class="column col-head">
+					<h5>PRIMARY SOURCES (API)</h5>
+				</div>
 			</div>
-			<div class="status-line">
-				<h5 class="status-text">NETWORK STATUS</h5>
-				<h5 class="status-okay">OKAY</h5>
+			<div class="row">
+				<div class="column">
+					<h5>Temperature</h5>
+				</div>
+				<div class="column">
+					<h5>32°C</h5>
+				</div>
 			</div>
-			<div class="status-line">
-				<h5 class="status-text">WATER LEVEL</h5>
-				<h5 class="status-text" id="water_level">67%</h5>
+			<div class="row">
+				<div class="column">
+					<h5>Rain</h5>
+				</div>
+				<div class="column">
+					<h5>"0.00"</h5>
+				</div>
 			</div>
-		
-				<h5 class="status-text">TEMPERATURE</h5>
-				<h5 class="status-text" id="temperature">67%</h5>
+			<div class="row">
+				<div class="column">
+					<h5>Wind Speed</h5>
+				</div>
+				<div class="column">
+					<h5>6 km/hr</h5>
+				</div>
 			</div>
 		</div>
-		
-			<div class="status-head">
-				<h5 class="status-text">PRIMARY SOURCES</h5>
+		<div class="table">
+			<div class="row">
+				<div class="column col-head">
+					<h5>SECONDARY SOURCES (STATION)</h5>
+				</div>
 			</div>
-			<div class="status-line">
-				<h5 class="status-text">NETWORK STATUS</h5>
-				<h5 class="status-okay">OKAY</h5>
+			<div class="row">
+				<div class="column">
+					<h5>Temperature</h5>
+				</div>
+				<div class="column">
+					<h5 id="temperature">67deg</h5>
+				</div>
 			</div>
-			<div class="status-line">
-				<h5 class="status-text">WATER LEVEL</h5>
-				<h5 class="status-text">67%</h5>
+			<div class="row">
+				<div class="column">
+					<h5>Carbon & Smoke</h5>
+				</div>
+				<div class="column">
+					<h5>40</h5>
+				</div>
 			</div>
-			<div class="status-line">
-				<h5 class="status-text">TRAFFIC JAMS</h5>
-				<h5 class="status-text">67%</h5>
+			<div class="row">
+				<div class="column">
+					<h5>Water Level</h5>
+				</div>
+				<div class="column">
+					<h5 id="water_level">120kmph</h5>
+				</div>
+			</div>
+		</div>
+		<div class="table">
+			<div class="row">
+				<div class="column col-head">
+					<h5>ML DISASTER TRACKING</h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column">
+					<h5>Flood</h5>
+				</div>
+				<div class="column">
+					<h5>Waiting</h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column">
+					<h5>Landslide</h5>
+				</div>
+				<div class="column">
+					<h5>Waiting</h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column">
+					<h5>Wildfire</h5>
+				</div>
+				<div class="column">
+					<h5>Waiting</h5>
+				</div>
 			</div>
 		</div>
 
 	</div>
 	<div class="nav">
-		<img src="skull.png">
+        <a href="comm.html"><img src="skull.png"></a>
 		<div class="links">
 			<a href="index.html">HOME</a>
-			<a href="index.html">EVAC</a>
+			<a href="evac.html">EVAC</a>
 			<a href="stats.html" class="super">STATS</a>
 		</div>
 	</div>
