@@ -21,6 +21,8 @@ const firebaseConfig = {
 
     const temperature = ref(db, 'temperature');
     const water_level = ref(db, 'water_level');
+    const vibration = ref(db, 'vibration');
+    const gas_level = ref(db, 'gas_Detection');
 
     console.log(document);
 
@@ -35,25 +37,51 @@ const firebaseConfig = {
     
     onValue(temperature, (snapshot) => {
     	const data = snapshot.val();
+        var newTemp = data;
     	console.log(data);
         const dataContainer = document.getElementById('temperature');
         dataContainer.innerHTML = JSON.stringify(data, null, 2);
     });
 
     onValue(water_level, (snapshot) => {
-    	const data = snapshot.val();
+    	let data = snapshot.val();
+        if (data == "1") {
+            data = "Low"
+        }
+        else if (data == "2") {
+            data = "Medium"
+        }
+        else if (data == "3") {
+            data = "High"
+        }
+        else {
+            data = "Very High"
+        }
     	console.log(data);
         const dataContainer = document.getElementById('water_level');
         dataContainer.innerHTML = JSON.stringify(data, null, 2);
     });
 
-const apiKey = '7ad415d46b41f486db6d278b774e0ec8';
-const cityName = 'Delhi';
+    onValue(vibration, (snapshot) => {
+        let data = snapshot.val();
+        data == "1" ? data = "0" : data = "1";
+        console.log(data);
+        const dataContainer = document.getElementById('vibration');
+        dataContainer.innerHTML = JSON.stringify(data, null, 2);
+    });
 
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`) // Fetch data using city name and API key
-.then(response => response.json())
-.then(data => {
-  const temperature = Math.round(data.main.temp); // Extract and round temperature
-  document.getElementById('temperature').textContent = `${temperature} °C`; // Update HTML with temperature and degree symbol
-})
-.catch(error => console.error(error));
+    onValue(gas_level, (snapshot) => {
+        const data = snapshot.val();
+        var newGas = data;
+        console.log(newGas);
+        console.log(data);
+        const dataContainer = document.getElementById('gas_level');
+        dataContainer.innerHTML = JSON.stringify(data, null, 2);
+    });
+
+
+console.log("the temp is", newTemp)
+console.log("the temp is", newTemp)
+let prob =( 1 - ((Math.floor(newTemp) + (Math.floor(newGas) * 70)/100) * 100))
+console.log("the probability is")
+console.log(Math.floor(prob))
