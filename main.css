@@ -292,7 +292,7 @@ section h6 {
 	color: white;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
 	html {
 		font-size: 4px;
 	}
