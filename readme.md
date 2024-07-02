@@ -1,6 +1,8 @@
 # INTEGRATED DISASTER RESILIANCE SYSTEM (IDRS)
 IDRS, Our completely Autonomous Disaster Management/Assistance system.
 Designed free of Stacks, written in pure HTML, CSS & JS. Highly performant & Efficient.
+![idrs-app](https://github.com/hxri-nxrxyxn/kapithan-idrs-ui/assets/97329430/46636f39-5575-446b-9875-d3748217c656)
+
 
 # TEAM MEMBERS
 * Andrewjos Sebastian
