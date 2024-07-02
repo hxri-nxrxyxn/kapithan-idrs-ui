@@ -17,13 +17,13 @@ Video to be embedded soon.
 
 # LIBRARIES USED
 1. Web App
-	None.
+	* None.
 	
 2. ESP8266 NodeMCU
-	FirebaseESP8266
-	ESP8266WiFi
-	OneWire
-	DallasTemperature
+	* FirebaseESP8266
+	* ESP8266WiFi
+	* OneWire
+	* DallasTemperature
 
 # HOW TO CONFIGURE
 1. Flash the provided .ino files through arduino software onto an ESP8266 NodeMCU.
