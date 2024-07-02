@@ -144,6 +144,9 @@ html {
 .ship {
   animation: float 2s ease-in-out infinite; /* Animation name, duration, timing and loop count */
 }
+.anim2 {
+  animation: float2 2s ease-in-out infinite; /* Animation name, duration, timing and loop count */
+}
 
 @keyframes float {
   0%, 100% {
@@ -151,6 +154,16 @@ html {
   }
   50% {
     transform: translateY(-15px);
+  }
+}
+
+
+@keyframes float2 {
+  0%, 100% {
+    transform: translateY(230px); 
+  }
+  50% {
+    transform: translateY(250px);
   }
 }
 
@@ -277,4 +290,13 @@ section h6 {
 	background-color: black;
 	margin-top: 15rem;
 	color: white;
+}
+
+@media screen and (min-width: 800px) {
+	html {
+		font-size: 4px;
+	}
+	.body {
+		margin-bottom: 15rem;
+	}
 }
